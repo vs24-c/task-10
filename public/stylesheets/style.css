@@ -10,8 +10,25 @@ h1 {
   line-height: 1.2;
   color: orchid;
 }
+
 p {
   font-size: 18px;
   line-height: 1.5;
   color: #666;
+}
+.task__list {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  & li {
+     font-size: 18px;
+  line-height: 1.5;
+  color: #666;
+  }
+  & h5 {
+  font-size: 25px;
+  font-weight: 700;
+  color: #333;
+}
 }

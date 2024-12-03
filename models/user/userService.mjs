@@ -12,6 +12,7 @@ class UserService {
       const hashedPassword = await bcrypt.hash(password, 10);
       const newUser = new User({ user, userName, password: hashedPassword });        
       await newUser.save();
+      return newUser;
     } catch (error) {
       console.error('Error during user registration:', error);
       throw new Error('Error registering user');

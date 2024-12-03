@@ -10,5 +10,10 @@ router.post('/registr',
   ValidateUsSchem.userValid,
   UserController.userRegistr);
 
+router.post('/login',
+  ValidateUsSchem.userValid,
+  UserController.userLogin)
+
+router.get('/logout', UserController.userLogout)
 
 export default router

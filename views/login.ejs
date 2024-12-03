@@ -20,7 +20,14 @@
            <% }); %>
          </ul>
          <% } %>
-  <form class="" action="" method="post">
+         <% if (messages.length > 0) { %>
+            <ul class="message-err">
+              <% messages.forEach(function(message) { %>
+                <li><%= message %></li>
+             <% }); %>
+            </ul>
+         <% } %>
+  <!-- <form class="" action="" method="post">
     <label id="user-name" for="">Enter your Name:
       <input  name="user" type="text" placeholder="Your Name" value="<%= user?.user%>">
     </label>
@@ -31,7 +38,7 @@
       <input  name="password" type="password" placeholder="Your Password" value="<%= user?.password %>" required>
     </label>
       <button class="btn" id="btn-rl" type="submit"></button>
-  </form>
+  </form> -->
   </div>
   <script src="/javascripts/login.js"></script>
   </body>
